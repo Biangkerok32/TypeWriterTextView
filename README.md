@@ -1,5 +1,7 @@
 # TypeWriterTextView
 
+[![Release](https://jitpack.io/v/ar-arvind/TypeWriterTextView.svg)](https://jitpack.io/#ar-arvind/TypeWriterTextView)
+
 Type Writer Animation effect for Android TextView written in java.
 
 ![LOGO](https://github.com/ar-arvind/TypeWriterTextView/blob/master/assets/logo.jpg)
