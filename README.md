@@ -13,7 +13,6 @@ Type Writer Animation effect for Android TextView written in java.
 ## Setup
 
 1. Include the following in your project's top level `build.gradle` file.
-
 ```gradle
 allprojects {
     repositories {
@@ -23,7 +22,6 @@ allprojects {
 ```
 
 2. In the app `build.gradle` file add the following dependency.
-
 ```gradle
 implementation 'com.github.ar-arvind:TypeWriterTextView:1.0.1'
 ```
