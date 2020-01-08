@@ -30,7 +30,7 @@ import androidx.appcompat.widget.AppCompatTextView;
  * <b>GitHub URL:</b> <a href="https://github.com/ar-arvind/TypeWriterTextView">https://github.com/ar-arvind/TypeWriterTextView</a>
  *
  * @author ar-arvind
- * @version 1.0.0
+ * @version 1.0.1
  * @since 2019-07-28
  */
 
@@ -65,17 +65,7 @@ public class TypeWriterTextView extends AppCompatTextView {
      * @param duration Animation duration in milliseconds.
      */
     public void typeText(@NonNull CharSequence text, int duration) {
-        this.text = text;
-        if (TextUtils.isEmpty(this.text)) {
-            return;
-        }
-        textLength = TextUtils.getTrimmedLength(this.text);
-        if (textLength == 0) {
-            return;
-        }
-        this.duration = duration;
-        count = 0;
-        postDelayed(runnable, duration);
+        startTyping(text, duration);
     }
 
     /**
@@ -83,7 +73,13 @@ public class TypeWriterTextView extends AppCompatTextView {
      * @param duration   Animation duration in milliseconds.
      */
     public void typeText(@StringRes int resourceId, int duration) {
-        text = getContext().getString(resourceId);
+        startTyping(getResources().getString(resourceId), duration);
+    }
+
+    private void startTyping(@NonNull CharSequence text, int duration) {
+        count = 0;
+        this.duration = duration;
+        this.text = text;
         if (TextUtils.isEmpty(text)) {
             return;
         }
@@ -91,8 +87,6 @@ public class TypeWriterTextView extends AppCompatTextView {
         if (textLength == 0) {
             return;
         }
-        this.duration = duration;
-        count = 0;
         postDelayed(runnable, duration);
     }
 

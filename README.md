@@ -25,7 +25,7 @@ allprojects {
 2. In the app `build.gradle` file add the following dependency.
 
 ```gradle
-implementation 'com.github.ar-arvind:TypeWriterTextView:1.0.0'
+implementation 'com.github.ar-arvind:TypeWriterTextView:1.0.1'
 ```
 
 ## Usage sample
